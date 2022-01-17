@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Assessments.SectionScoreEditReport">
+      <class name="Templates.Yes_No_Qns">
         <methods>
-          <include name="testEditSectionScorefromReport"/>
-          <include name="OpenBrowser"/>
+          <include name="test"/>
           <include name="CloseBrowser"/>
           <include name="login"/>
           <include name="logout"/>
+          <include name="OpenBrowser"/>
         </methods>
-      </class> <!-- Assessments.SectionScoreEditReport -->
+      </class> <!-- Templates.Yes_No_Qns -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

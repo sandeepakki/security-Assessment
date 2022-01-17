@@ -7,6 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Qns1_10Slider extends BaseClass {
@@ -17,8 +18,7 @@ public class Qns1_10Slider extends BaseClass {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		WebElement AssessmentTab = driver.findElement(By.linkText("Assessments"));
 		AssessmentTab.click();
-		WebElement Templates = driver.findElement(By.linkText("Templates"));
-		Templates.click();
+		driver.navigate().to("https://sa.aristiun.com/app/assessments/templates");
 		try {
 		WebElement clTemp = driver.findElement(By.xpath("//div[contains(text(),'Lorem Ipsum')]"));
 		clTemp.click();
@@ -77,6 +77,12 @@ public class Qns1_10Slider extends BaseClass {
 		a.moveToElement(Save).click().build().perform();
 		WebElement collapse = driver.findElement(By.xpath("//button[@class='icon-button ml-1 edit-button btn btn-outline-theme-3']"));
 		collapse.click();
+		Thread.sleep(2000);
+		WebElement success = driver.findElement(By.tagName("h4"));
+		Assert.assertTrue((success).getText()
+				.contains("Data updated successfully."));
+		Thread.sleep(3000);
+		
 	
 	}
 }
