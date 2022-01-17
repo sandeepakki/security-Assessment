@@ -1,18 +1,16 @@
 package com.aristiun.dev_sa.Login;
-
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class ExcelDataProvider extends BaseClass {
+public class Login extends BaseClass {
 
 	@Test(dataProvider = "LoginData")
-	public void testLoginFeature(String Username,String Password,String exp,String expPage,String ActPage) throws InterruptedException {
+	public void testLoginFeature(String Username,String Password,String exp,String landingPage,String ActResult,String Index) throws InterruptedException, IOException {
 		
 		driver.get("https://sa.aristiun.com/login");
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
@@ -22,34 +20,43 @@ public class ExcelDataProvider extends BaseClass {
 		WebElement txtPassword = driver.findElement(By.name("password"));
 		txtPassword.clear();
 		txtPassword.sendKeys(Password);
+	
 		WebElement Login = driver.findElement(By.xpath("//span[contains(text(),'LOGIN')]"));
 		Login.click();
 		Thread.sleep(5000);
 		String actPage = driver.getCurrentUrl();
-		System.out.println(actPage);
+		int i=Integer.parseInt(Index); 
+		String path=".\\dataFiles\\LoginData.xlsx";
+		ExcelUtils excel = new ExcelUtils(path);
+			
 		 if(exp.equals("Pass"))
 		 {
-			 if(expPage.equals(actPage)) {
-				 driver.findElement(By.xpath("//span[@class='name mr-3']")).click();
+			 if(landingPage.equals(actPage)) {
+				 excel.setCellData("Sheet1", i, 4, "Pass");
+				 driver.findElement(By.xpath("//div[@class='navbar-right']")).click();
 				 driver.findElement(By.xpath("//button[@type='button'][3]")).click();
 				 Assert.assertTrue(true);
-			 }
+			   }
 			 else{
-				 Assert.assertTrue(false);
-			 }}
+				 excel.setCellData("Sheet1", i, 4, "Fail");
+				 Assert.assertTrue(false); 
+			    }
+			 }
 			 else if(exp.equals("Fail"))
 			 {
-				 if(expPage.equals(actPage)) {
-					 driver.findElement(By.xpath("//span[@class='name mr-3']")).click();
-					 driver.findElement(By.xpath("//button[@type='button'][3]")).click();
+				 if(landingPage.equals(actPage)) {
+					 excel.setCellData("Sheet1", i, 4, "Fail");
+					 driver.findElement(By.xpath("//div[@class='navbar-right']")).click();
+					 driver.findElement(By.xpath("//button[text()='button'][3]")).click();
 					 Assert.assertTrue(false);
 				 }
 				 else
 				 {
+					 excel.setCellData("Sheet1", i, 4, "Fail");
 					 Assert.assertTrue(true);
 				 }
 			 }
-		
+		 System.out.println();
 		 
 		 }
 						
@@ -63,8 +70,6 @@ public class ExcelDataProvider extends BaseClass {
 		int totalcols= excel.getCellCount("Sheet1",1);
 				
 		String loginData[][]=new String[totalrows][totalcols];
-			
-		
 		for(int i=1;i<=totalrows;i++) //1
 		{
 			for(int j=0;j<totalcols;j++) //0
@@ -73,7 +78,7 @@ public class ExcelDataProvider extends BaseClass {
 			}
 				
 		}	
+		return loginData;	
 		
-		return loginData;
-}	
+	}
 }

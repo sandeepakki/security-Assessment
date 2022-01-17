@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Resource_Model.Create_Resource"/>
+      <class name="Resource_Model.Update_Resource"/>
+      <class name="Resource_Model.Create_Control"/>
+      <class name="Resource_Model.ControlEdit"/>
+      <class name="Resource_Model.DeleteControl"></class>
+      <class name="Resource_Model.LibCtrls"/>
+      <class name="Resource_Model.Temp_Review"/>
+      <class name="Resource_Model.Delete_Resource"></class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

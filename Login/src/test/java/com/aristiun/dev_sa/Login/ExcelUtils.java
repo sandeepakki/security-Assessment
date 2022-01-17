@@ -73,9 +73,10 @@ public class ExcelUtils {
 		workbook.close();
 		fi.close();
 		return data;
+	
 	}
 	
-	public String setCellData(String sheetName,int rownum,int colnum,String data) throws IOException
+	public void setCellData(String sheetName,int rownum,int colnum,String data) throws IOException
 	{
 		File xlfile=new File(path);
 		if(!xlfile.exists())    // If file not exists then create new file
@@ -94,7 +95,8 @@ public class ExcelUtils {
 		sheet=workbook.getSheet(sheetName);
 					
 		if(sheet.getRow(rownum)==null)   // If row not exists then create new Row
-				sheet.createRow(rownum);
+				
+			sheet.createRow(rownum);
 		row=sheet.getRow(rownum);
 		
 		cell=row.createCell(colnum);
@@ -104,7 +106,6 @@ public class ExcelUtils {
 		workbook.close();
 		fi.close();
 		fo.close();
-		return data;
 	}
 	
 	
