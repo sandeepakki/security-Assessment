@@ -75,9 +75,7 @@ public class Qns1_10Slider extends BaseClass {
 		WebElement Save = driver.findElement(By.xpath("//button[@class='mr-3 btn-multiple-state flex-grow-1  btn btn-primary btn-lg']"));
 		Actions a = new Actions(driver);
 		a.moveToElement(Save).click().build().perform();
-		WebElement collapse = driver.findElement(By.xpath("//button[@class='icon-button ml-1 edit-button btn btn-outline-theme-3']"));
-		collapse.click();
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		WebElement success = driver.findElement(By.tagName("h4"));
 		Assert.assertTrue((success).getText()
 				.contains("Data updated successfully."));
