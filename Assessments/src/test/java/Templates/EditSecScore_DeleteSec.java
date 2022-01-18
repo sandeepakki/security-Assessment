@@ -28,7 +28,7 @@ public class EditSecScore_DeleteSec extends BaseClass {
 		catch(NoSuchElementException e) {
 			System.out.println(e);
 		}
-		WebElement clEdit = driver.findElement(By.xpath("//*[text()='Edit']"));
+		WebElement clEdit = driver.findElement(By.xpath("//img[@alt='Edit']"));
 		clEdit.click();
 			WebElement chName=	driver.findElement(By.name("name"));
 		chName.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"Identify");
@@ -36,16 +36,21 @@ public class EditSecScore_DeleteSec extends BaseClass {
 		clPassScore.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"6");
 		WebElement save = driver.findElement(By.xpath("//button[@class='btn-multiple-state flex-grow-1 mr-2  btn btn-primary btn-lg']"));
 		save.click();
-		Thread.sleep(3000);
-		WebElement clEdit2 = driver.findElement(By.xpath("//*[text()='Edit']"));
-		clEdit2.click();
-		WebElement delete = driver.findElement(By.xpath("//button[@class='btn-multiple-state flex-grow-1 mr-2  btn btn-outline-danger btn-lg']"));
-		delete.click();
-		Thread.sleep(2000);
 		WebElement success = driver.findElement(By.tagName("h4"));
 		WebDriverWait wait = new WebDriverWait(driver,20);
 		wait.until(ExpectedConditions.visibilityOf(success));
 		Assert.assertTrue((success).getText()
+				.contains("Success"));
+		Thread.sleep(2000);
+		WebElement clEdit2 = driver.findElement(By.xpath("//img[@alt='Edit']"));
+		clEdit2.click();
+		WebElement delete = driver.findElement(By.xpath("//button[@class='btn-multiple-state flex-grow-1 mr-2  btn btn-outline-danger btn-lg']"));
+		delete.click();
+		Thread.sleep(1000);
+		WebElement success1 = driver.findElement(By.tagName("h4"));
+		WebDriverWait wait1 = new WebDriverWait(driver,20);
+		wait1.until(ExpectedConditions.visibilityOf(success1));
+		Assert.assertTrue((success1).getText()
 				.contains("Success"));
 		Thread.sleep(3000);
 		

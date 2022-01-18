@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,21 +20,24 @@ public class Publish_Temp_MultipleQnsPerPage extends BaseClass{
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		WebElement AssessmentTab = driver.findElement(By.linkText("Assessments"));
 		AssessmentTab.click();
-		WebElement Templates = driver.findElement(By.linkText("Templates"));
-		Templates.click();
+		driver.navigate().to("https://sa.aristiun.com/app/assessments/templates");
 		WebElement csa = driver.findElement(By.xpath("//div[contains(text(),'CSA - Cloud Security Controls')]"));
 		csa.click();
 		WebElement publish = driver.findElement(By.xpath("//button[text()='Publish']"));
 		publish.click();
 		WebElement name = driver.findElement(By.name("name"));
-		name.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"CSA-TEST TEMPLATE");
-		WebElement tempIntro = driver.findElement(By.xpath("//label[text()='Template Introduction']/..//div[@class='ql-editor']"));
+		name.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"CSA-TEST Multiple Qns Per Page");
+		WebElement textHeading = driver.findElement(By.xpath("//span[@class='ql-picker-label']"));
+		textHeading.click();
+		WebElement Heading3 = driver.findElement(By.xpath("//span[@data-value='3']"));
+		Heading3.click();
+		WebElement tempIntro = driver.findElement(By.xpath("//div[@class='ql-editor']"));
 		tempIntro.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"Lorem Ipsum Is a dummy text..!");
-		WebElement clresurce = driver.findElement(By.xpath("//label[text()='Resources']/..//div[@class='react-select__control css-yk16xz-control']"));
+		WebElement clresurce = driver.findElement(By.xpath("//label[text()='Resources']/..//div[@class='react-select__control css-11tf2le']"));
 		clresurce.click();
 		WebElement slresurce = driver.findElement(By.xpath("//div[text()='Scott Hughes']"));
 		slresurce.click();
-		WebElement clreviewer = driver.findElement(By.xpath("//label[text()='Reviewers']/..//div[@class='react-select__control css-yk16xz-control']"));
+		WebElement clreviewer = driver.findElement(By.xpath("//label[text()='Reviewers']/..//div[@class='react-select__control css-11tf2le']"));
 		clreviewer.click();
 		WebElement slreviewer = driver.findElement(By.xpath("//div[text()='Saket SK']"));
 		slreviewer.click();
@@ -48,11 +53,17 @@ public class Publish_Temp_MultipleQnsPerPage extends BaseClass{
 		limitDays.sendKeys("1");
 		WebElement tickAllowMultipleQns = driver.findElement(By.xpath("//label[@for='assessment_allow_multiple_questions']"));
 		tickAllowMultipleQns.click();
-		WebElement clNext = driver.findElement(By.xpath("//span[text()=' Next ']"));
+		WebElement clNext = driver.findElement(By.xpath("//button[@class='btn-shadow btn-multiple-state  btn btn-primary']"));
 		clNext.click();
-		WebElement clPrevious = driver.findElement(By.xpath("//span[text()='Previous']"));
+		WebElement clPrevious = driver.findElement(By.xpath("//button[@class='mr-3 btn-shadow  btn btn-outline-primary']"));
 		clPrevious.click();
-		WebElement reportSummary = driver.findElement(By.xpath("//label[text()='Report Summary']/..//div[@class='ql-editor ql-blank']"));
+		WebElement clresurce1 = driver.findElement(By.xpath("//label[text()='Resources']/..//div[@class='react-select__control css-11tf2le']"));
+		clresurce1.click();
+		WebElement slresurce1 = driver.findElement(By.xpath("//div[text()='Scott Hughes']"));
+		slresurce1.click();
+		WebElement clNext1 = driver.findElement(By.xpath("//button[@class='btn-shadow btn-multiple-state  btn btn-primary']"));
+		clNext1.click();
+		WebElement reportSummary = driver.findElement(By.xpath("//label[text()='Report Summary']/..//div[@class='ql-editor']"));
 		reportSummary.sendKeys("Lorem Ipsum is a dummy text");
 		WebElement showQnsDesc = driver.findElement(By.xpath("//label[@for='assessment_show_question_descriptions']"));
 		showQnsDesc.click();
@@ -64,20 +75,22 @@ public class Publish_Temp_MultipleQnsPerPage extends BaseClass{
 		showHeatMap.click();
 		WebElement showSupersec = driver.findElement(By.xpath("//label[@for='assessment_show_super_section_descriptions']"));
 		showSupersec.click();
-		clNext.click();
+		WebElement clNext2 = driver.findElement(By.xpath("//button[@class='btn-shadow btn-multiple-state  btn btn-primary']"));
+		clNext2.click();
 		WebElement generateExecReport = driver.findElement(By.xpath("//label[@for='assessment_executive_report']"));
 		generateExecReport.click();
-		WebElement clgraph = driver.findElement(By.xpath("//label[text()='Select graph to display in executive file']/..//div[@class='react-select__control css-yk16xz-control']"));
+		WebElement clgraph = driver.findElement(By.xpath("//label[text()='Select graph to display in executive file']/..//div[@class='react-select css-2b097c-container']"));
 		clgraph.click();
 		WebElement Radar = driver.findElement(By.xpath("//div[text()='Radar']"));
 		Radar.click();
 		WebElement Publish = driver.findElement(By.xpath("//span[text()=' Publish ']"));
 		Publish.click();
-		Thread.sleep(2000);
 		WebElement success = driver.findElement(By.tagName("h4"));
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOf(success));
 		Assert.assertTrue((success).getText()
-				.contains("Assessment published successfully."));
-		Thread.sleep(10000);
+				.contains("Assessment Published Successfully."));
+		Thread.sleep(5000);
 	}
 
 }

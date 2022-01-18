@@ -18,8 +18,7 @@ public class import_Sections extends BaseClass {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		WebElement AssessmentTab = driver.findElement(By.linkText("Assessments"));
 		AssessmentTab.click();
-		WebElement Templates = driver.findElement(By.linkText("Templates"));
-		Templates.click();
+		driver.navigate().to("https://sa.aristiun.com/app/assessments/templates");
 		try {
 		WebElement clTemp = driver.findElement(By.xpath("//div[contains(text(),'Lorem Ipsum')]"));
 		clTemp.click();
@@ -32,22 +31,23 @@ public class import_Sections extends BaseClass {
 		WebElement impSections = driver.findElement(By.xpath("//button[text()='Import Section']"));
 		impSections.click();
 		Thread.sleep(1000);
-		WebElement cancel = driver.findElement(By.xpath("//button[text()='Cancel']"));
+		WebElement cancel = driver.findElement(By.xpath("//img[@alt='Close']"));
 		cancel.click();
 		Thread.sleep(1000);
 		WebElement importToggle1 = driver.findElement(By.xpath("//button[@type='button' and @class='dropdown-toggle-split dropdown-toggle-split-btn mb-3 dropdown-toggle btn btn-outline-secondary btn-lg']"));
 		importToggle1.click();
 		WebElement impSections1 = driver.findElement(By.xpath("//button[text()='Import Section']"));
 		impSections1.click();
-		WebElement clDropdown = driver.findElement(By.xpath("//label[contains(text(),'Templates')]/..//div[@class='react-select__control css-yk16xz-control']"));
+		WebElement clDropdown = driver.findElement(By.xpath("//div[@class='react-select__indicators css-1wy0on6']"));
 		clDropdown.click();
 		WebElement chooseTemp = driver.findElement(By.xpath("//div[text()='CSA - Cloud Security Controls assessment (CCM) - Test']"));
 		chooseTemp.click();
-		WebElement clDropdown2 = driver.findElement(By.xpath("//label[contains(text(),'Sections')]/..//div[@class='react-select__control css-yk16xz-control']"));
+		WebElement clDropdown2 = driver.findElement(By.xpath("(//div[@class='react-select__indicators css-1wy0on6'])[2]"));
 		clDropdown2.click();
 		WebElement chooseSection = driver.findElement(By.xpath("//div[text()='Interoperability and Portability - IPY']"));
 		chooseSection.click();
-		WebElement importBtn = driver.findElement(By.xpath("//button[@type='submit']"));
+		Thread.sleep(1000);
+		WebElement importBtn = driver.findElement(By.xpath("//button[@class='btn btn-primary btn-lg']"));
 		importBtn.click();
 		WebElement success = driver.findElement(By.tagName("h4"));
 		WebDriverWait wait = new WebDriverWait(driver,20);

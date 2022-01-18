@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Templates.Yes_No_Qns">
+      <class name="Templates.DuplicateTemplate">
         <methods>
-          <include name="test"/>
           <include name="CloseBrowser"/>
           <include name="login"/>
           <include name="logout"/>
+          <include name="testDuplicateTemplate"/>
           <include name="OpenBrowser"/>
         </methods>
-      </class> <!-- Templates.Yes_No_Qns -->
+      </class> <!-- Templates.DuplicateTemplate -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

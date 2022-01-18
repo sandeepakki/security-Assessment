@@ -21,7 +21,7 @@ public class DuplicateTemplate extends BaseClass {
 		AssessmentTab.click();
 		driver.navigate().to("https://sa.aristiun.com/app/assessments/templates");
 		 try {
-			 WebElement CSA_Info = driver.findElement(By.xpath("(//div[text()='More Info'])[2]"));
+			 WebElement CSA_Info = driver.findElement(By.xpath("(//div[text()='More Info'])[1]"));
 			 CSA_Info.click();
 		 }
 		catch(NoSuchElementException e) {
@@ -32,10 +32,10 @@ public class DuplicateTemplate extends BaseClass {
 		 duplicate.click();
 		 WebElement Name = driver.findElement(By.name("name"));
 		 Name.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"Duplicated CSA");
-		 WebElement About = driver.findElement(By.xpath("//div[@class='ql-editor ql-blank']"));
+		 WebElement About = driver.findElement(By.xpath("//div[@class='ql-editor']"));
 		 About.sendKeys("This is test template...!");
-		 WebElement removeSec1 = driver.findElement(By.xpath("//input[@type='checkbox' and @value='2520']"));
-		 removeSec1.click();
+//		 WebElement removeSec1 = driver.findElement(By.xpath("//input[@type='checkbox' and @value='2520']"));
+//		 removeSec1.click();
 		 WebElement create = driver.findElement(By.xpath("//button[@type='submit']"));
 		 create.click();
 		 Thread.sleep(2000);

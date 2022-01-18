@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="Test_UsersTab">
     <classes>
       <class name="User_Module.Invite"/>
       <class name="User_Module.ReInvite"/>
       <class name="User_Module.EditUser"/>
       <class name="User_Module.DeleteUser"/>
     </classes>
-  </test> <!-- Test -->
+  </test> <!-- Test _UsersTab-->
 </suite> <!-- Suite -->

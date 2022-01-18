@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Template_Scenarios">
+    <classes>
+      <class name="Templates.Create_Template"/>
+      <class name="Templates.configuring_template"/>
+      <class name="Templates.AddSections"/>
+      <class name="Templates.Yes_No_Qns"/>
+      <class name="Templates.Qns1_10Slider"/>
+      <class name="Templates.Reordering_Sections_Questions"/>
+      <class name="Templates.EditSecScore_DeleteSec"/>
+      <class name="Templates.import_Sections"/>
+      <class name="Templates.Publish_Temp_MultipleQnsPerPage"/>
+      <class name="Templates.publish_without_DetailedExecReport"/>
+      <class name="Templates.publish_without_ExecReport"/>
+      <class name="Templates.EditQuestions"/>
+      <class name="Templates.DuplicateTemplate"/>
+    </classes>
+  </test> <!-- Template_Scenarios -->
+</suite> <!-- Suite -->
