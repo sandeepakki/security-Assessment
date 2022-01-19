@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 public class ControlDashboard extends BaseClass {
@@ -13,8 +14,9 @@ public class ControlDashboard extends BaseClass {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//   Click on Controls Tab link
-		WebElement ControlTab = driver.findElement(By.xpath("//a[@data-flag='admin-controls']"));
-		ControlTab.click();
+		Actions a = new Actions(driver);
+		WebElement ControlTab = driver.findElement(By.xpath("//a[@href='/app/controls/']"));
+		a.moveToElement(ControlTab).click().build().perform();
 	 // Click controls module
 		driver.navigate().to("https://sa.aristiun.com/app/controls/dashboard");
 		WebElement totalControls = driver.findElement(By.xpath("//p[text()='Total Controls']"));

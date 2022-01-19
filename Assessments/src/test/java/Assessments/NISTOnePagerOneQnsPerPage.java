@@ -13,10 +13,9 @@ public class NISTOnePagerOneQnsPerPage extends BaseClass {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		WebElement AssessmentTab = driver.findElement(By.linkText("Assessments"));
 		AssessmentTab.click();
-		WebElement Assessments = driver.findElement(By.xpath("//a[@href='/app/assessments/assessment']"));
-		Assessments.click();
+		driver.navigate().to("https://sa.aristiun.com/app/assessments/assessment");
 		try {
-			WebElement clTemp = driver.findElement(By.xpath("//div[contains(text(),'Test')]"));
+			WebElement clTemp = driver.findElement(By.xpath("//div[contains(text(),'NIST')]"));
 			clTemp.click();
 			}
 			catch(NoSuchElementException e) {
@@ -24,7 +23,7 @@ public class NISTOnePagerOneQnsPerPage extends BaseClass {
 			}
 		WebElement Invite = driver.findElement(By.xpath("//button[contains(text(),'Invite')]"));
 		Invite.click();
-		WebElement invitees = driver.findElement(By.xpath("//label[text()='Invitees']/..//div[@class='react-select__control css-yk16xz-control']"));
+		WebElement invitees = driver.findElement(By.xpath("//div[@class='react-select__indicators css-1wy0on6']"));
 		invitees.click();
 		WebElement user = driver.findElement(By.xpath("//span[text()='Sandeep Akki']"));
 		user.click();
@@ -246,6 +245,7 @@ public class NISTOnePagerOneQnsPerPage extends BaseClass {
 			QnsNo.click();
 			WebElement submit1 = driver.findElement(By.xpath("//span[text()=' Submit ']"));
 			submit1.click();
+			Thread.sleep(2000);
 			// view report
 			WebElement report = driver.findElement(By.xpath("//button[text()='View Report']"));
 			report.click();
@@ -256,12 +256,12 @@ public class NISTOnePagerOneQnsPerPage extends BaseClass {
 			detailedReport.click();
 			WebElement csvFile = driver.findElement(By.xpath("//button[contains(text(),'Export to CSV')]"));
 			csvFile.click();
-//			Thread.sleep(15000);
-//			WebElement reportOptions1 = driver.findElement(By.xpath("//span[text()='Report Options']"));
-//			reportOptions1.click();
-//			WebElement executiveReport = driver.findElement(By.xpath("//button[text()=' Download Executive Report']"));
-//			executiveReport.click();
+			Boolean reportOptions1 = driver.findElement(By.xpath("//span[text()='Report Options']")).isDisplayed();
+			WebElement reportOptions2 = driver.findElement(By.xpath("//span[text()='Report Options']"));
+			reportOptions2.click();
+			Boolean executiveReport = driver.findElement(By.xpath("//button[text()=' Download Detailed Report']")).isDisplayed();
+			WebElement executiveReport1 = driver.findElement(By.xpath("//button[text()=' Download Executive Report']"));
+			executiveReport1.click();
 			
 	}
-	
 }

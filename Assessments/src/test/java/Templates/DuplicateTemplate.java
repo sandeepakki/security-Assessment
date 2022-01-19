@@ -28,10 +28,14 @@ public class DuplicateTemplate extends BaseClass {
 			System.out.println(e.getMessage());
 		}
 		 Thread.sleep(1000);
-		 WebElement duplicate = driver.findElement(By.xpath("(//button[@class='btn btn-outline-primary btn-sm'])[2]"));
+		 WebElement duplicate = driver.findElement(By.xpath("//button[text()='Duplicate Template']"));
 		 duplicate.click();
 		 WebElement Name = driver.findElement(By.name("name"));
 		 Name.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"Duplicated CSA");
+		 WebElement AssessType = driver.findElement(By.xpath("//div[@class='react-select__value-container css-8sv6as']"));
+		 AssessType.click();
+		 WebElement Internal = driver.findElement(By.xpath("//div[text()='Internal Assessment']"));
+		 Internal.click();
 		 WebElement About = driver.findElement(By.xpath("//div[@class='ql-editor']"));
 		 About.sendKeys("This is test template...!");
 //		 WebElement removeSec1 = driver.findElement(By.xpath("//input[@type='checkbox' and @value='2520']"));

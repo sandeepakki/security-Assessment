@@ -6,6 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -16,8 +19,9 @@ public class EditControl extends BaseClass {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//   Click on Controls Tab link
-		WebElement ControlTab = driver.findElement(By.xpath("//a[@data-flag='admin-controls']"));
-		ControlTab.click();
+		Actions a = new Actions(driver);
+		WebElement ControlTab = driver.findElement(By.xpath("//a[@href='/app/controls/']"));
+		a.moveToElement(ControlTab).click().build().perform();
 		// Click controls module
 		driver.navigate().to("https://sa.aristiun.com/app/controls/controls");
 		// Edit Control
@@ -96,8 +100,9 @@ public class EditControl extends BaseClass {
 		clOwnerCircle.click();
 		WebElement submit = driver.findElement(By.xpath("//button[text()='Update']"));
 		submit.click();
-		Thread.sleep(2000);	
 		WebElement success = driver.findElement(By.tagName("h4"));
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOf(success));
 		Assert.assertTrue((success).getText()
 				.contains("Control Updated"));
 		Thread.sleep(3000);

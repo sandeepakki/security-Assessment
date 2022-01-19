@@ -5,6 +5,10 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -16,8 +20,9 @@ public class CreateControl extends BaseClass {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//   Click on Controls Tab link
-		WebElement ControlTab = driver.findElement(By.xpath("//a[@data-flag='admin-controls']"));
-		ControlTab.click();
+		Actions a = new Actions(driver);
+		WebElement ControlTab = driver.findElement(By.xpath("//a[@href='/app/controls/']"));
+		a.moveToElement(ControlTab).click().build().perform();
 	 // Click controls module
 		driver.navigate().to("https://sa.aristiun.com/app/controls/controls");
 		WebElement newControl = driver.findElement(By.xpath("//button[text()='Add New']"));
@@ -67,7 +72,13 @@ public class CreateControl extends BaseClass {
 		clOwnerCircle.click();
 		WebElement submit = driver.findElement(By.xpath("//button[text()='Create']"));
 		submit.click();
-		Thread.sleep(5000);
+		WebElement success = driver.findElement(By.tagName("h4"));
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOf(success));
+		Assert.assertTrue((success).getText()
+				.contains("New Control Added"));
+		Thread.sleep(3000);
+		
 	}	
 	@DataProvider(name="Create Control")
 	public String[][] getData() throws IOException {

@@ -25,12 +25,13 @@ public class Publish_Temp_MultipleQnsPerPage extends BaseClass{
 		csa.click();
 		WebElement publish = driver.findElement(By.xpath("//button[text()='Publish']"));
 		publish.click();
+		Thread.sleep(2000);
 		WebElement name = driver.findElement(By.name("name"));
 		name.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"CSA-TEST Multiple Qns Per Page");
-		WebElement textHeading = driver.findElement(By.xpath("//span[@class='ql-picker-label']"));
-		textHeading.click();
-		WebElement Heading3 = driver.findElement(By.xpath("//span[@data-value='3']"));
-		Heading3.click();
+//		WebElement textHeading = driver.findElement(By.xpath("//span[@aria-controls='ql-picker-options-3']"));
+//		textHeading.click();
+//		WebElement Heading3 = driver.findElement(By.xpath("//span[@data-value='3']"));
+//		Heading3.click();
 		WebElement tempIntro = driver.findElement(By.xpath("//div[@class='ql-editor']"));
 		tempIntro.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"Lorem Ipsum Is a dummy text..!");
 		WebElement clresurce = driver.findElement(By.xpath("//label[text()='Resources']/..//div[@class='react-select__control css-11tf2le']"));

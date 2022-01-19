@@ -7,6 +7,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -120,6 +123,12 @@ public class AddSections extends BaseClass{
 			Thread.sleep(2000);
 			WebElement clSave1 = driver.findElement(By.xpath("//button[@class='btn-multiple-state flex-grow-1  btn btn-primary btn-lg']"));
 			clSave1.click();
+			WebElement success = driver.findElement(By.tagName("h4"));
+			WebDriverWait wait = new WebDriverWait(driver,20);
+			wait.until(ExpectedConditions.visibilityOf(success));
+			Assert.assertTrue((success).getText()
+					.contains("Success"));
+			Thread.sleep(3000);
 			
 			}
 		}

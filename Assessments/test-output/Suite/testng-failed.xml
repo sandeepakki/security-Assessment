@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test_Templates(failed)">
+    <classes>
+      <class name="Templates.DuplicateTemplate">
+        <methods>
+          <include name="CloseBrowser"/>
+          <include name="login"/>
+          <include name="logout"/>
+          <include name="testDuplicateTemplate"/>
+          <include name="OpenBrowser"/>
+        </methods>
+      </class> <!-- Templates.DuplicateTemplate -->
+      <class name="Templates.Yes_No_Qns">
+        <methods>
+          <include name="test"/>
+          <include name="CloseBrowser"/>
+          <include name="login"/>
+          <include name="logout"/>
+          <include name="OpenBrowser"/>
+        </methods>
+      </class> <!-- Templates.Yes_No_Qns -->
+      <class name="Templates.EditSecScore_DeleteSec">
+        <methods>
+          <include name="CloseBrowser"/>
+          <include name="login"/>
+          <include name="logout"/>
+          <include name="testEditSectionScore"/>
+          <include name="OpenBrowser"/>
+        </methods>
+      </class> <!-- Templates.EditSecScore_DeleteSec -->
+      <class name="Templates.Reordering_Sections_Questions">
+        <methods>
+          <include name="testReordering"/>
+          <include name="CloseBrowser"/>
+          <include name="login"/>
+          <include name="logout"/>
+          <include name="OpenBrowser"/>
+        </methods>
+      </class> <!-- Templates.Reordering_Sections_Questions -->
+      <class name="Templates.Qns1_10Slider">
+        <methods>
+          <include name="testAddQuestions"/>
+          <include name="CloseBrowser"/>
+          <include name="login"/>
+          <include name="logout"/>
+          <include name="OpenBrowser"/>
+        </methods>
+      </class> <!-- Templates.Qns1_10Slider -->
+    </classes>
+  </test> <!-- Test_Templates(failed) -->
+</suite> <!-- Failed suite [Suite] -->

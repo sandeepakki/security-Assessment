@@ -7,6 +7,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -59,8 +61,9 @@ public class Yes_No_Qns extends BaseClass {
 		WebElement Save = driver.findElement(By.xpath("//button[@class='mr-3 btn-multiple-state flex-grow-1  btn btn-primary btn-lg']"));
 		Actions a = new Actions(driver);
 		a.moveToElement(Save).click().build().perform();
-		Thread.sleep(1000);
 		WebElement success = driver.findElement(By.tagName("h4"));
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOf(success));
 		Assert.assertTrue((success).getText()
 				.contains("Data updated successfully."));
 		Thread.sleep(3000);

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test_Controls">
+    <classes>
+      <class name="Controls_Module.SecurityAssessments.CreateControl"/>
+      <class name="Controls_Module.SecurityAssessments.EditControl"/>
+      <class name="Controls_Module.SecurityAssessments.DeleteControl"/>
+      <class name="Controls_Module.SecurityAssessments.CtrlObjective"/>
+      <class name="Controls_Module.SecurityAssessments.EditControlObject"/>
+      <class name="Controls_Module.SecurityAssessments.ControlDashboard"/>
+    </classes>
+  </test> <!-- Test_Controls -->
+</suite> <!-- Suite -->

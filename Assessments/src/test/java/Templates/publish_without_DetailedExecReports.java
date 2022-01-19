@@ -19,16 +19,12 @@ public class publish_without_DetailedExecReports extends BaseClass{
 		WebElement AssessmentTab = driver.findElement(By.linkText("Assessments"));
 		AssessmentTab.click();
 		driver.navigate().to("https://sa.aristiun.com/app/assessments/templates");
-		WebElement csa = driver.findElement(By.xpath("//div[contains(text(),'CSA - Cloud Security Controls')]"));
+		WebElement csa = driver.findElement(By.xpath("//div[contains(text(),'NIST')]"));
 		csa.click();
 		WebElement publish = driver.findElement(By.xpath("//button[text()='Publish']"));
 		publish.click();
 		WebElement name = driver.findElement(By.name("name"));
-		name.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"CSA-TEST Without Detailed Report");
-		WebElement textHeading = driver.findElement(By.xpath("//span[@class='ql-picker-label']"));
-		textHeading.click();
-		WebElement Heading3 = driver.findElement(By.xpath("//span[@data-value='3']"));
-		Heading3.click();
+		name.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"NIST-TEST Without Detailed Report");
 		WebElement tempIntro = driver.findElement(By.xpath("//div[@class='ql-editor']"));
 		tempIntro.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"Lorem Ipsum Is a dummy text..!");
 		WebElement clresurce = driver.findElement(By.xpath("//label[text()='Resources']/..//div[@class='react-select__control css-11tf2le']"));
@@ -49,8 +45,6 @@ public class publish_without_DetailedExecReports extends BaseClass{
 		restrictAssessment.click();
 		WebElement limitDays = driver.findElement(By.name("limit_days"));
 		limitDays.sendKeys("1");
-		WebElement tickAllowMultipleQns = driver.findElement(By.xpath("//label[@for='assessment_allow_multiple_questions']"));
-		tickAllowMultipleQns.click();
 		WebElement clNext = driver.findElement(By.xpath("//button[@class='btn-shadow btn-multiple-state  btn btn-primary']"));
 		clNext.click();
 		WebElement clPrevious = driver.findElement(By.xpath("//button[@class='mr-3 btn-shadow  btn btn-outline-primary']"));

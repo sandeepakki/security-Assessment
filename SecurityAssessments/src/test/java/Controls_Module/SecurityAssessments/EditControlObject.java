@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,8 +15,10 @@ public class EditControlObject extends BaseClass{
 	public void testEditCtrlObj() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//   Click on Controls Tab link
-		WebElement ControlTab = driver.findElement(By.xpath("//a[@data-flag='admin-controls']"));
-		ControlTab.click();
+		Actions a = new Actions(driver);
+		WebElement ControlTab = driver.findElement(By.xpath("//*[text()='Controls']"));
+		a.moveToElement(ControlTab).click().build().perform();
+		Thread.sleep(1000);
 	 // Click controls module
 		driver.navigate().to("https://sa.aristiun.com/app/controls/control-objective");
 		WebElement obj1=driver.findElement(By.xpath("//span[contains(text(),'Lorem')]"));
@@ -40,13 +43,13 @@ public class EditControlObject extends BaseClass{
 		//Delete Control Objective
 		WebElement checkbox = driver.findElement(By.xpath("(//input[@type='checkbox'])[2]"));
 		checkbox.click();
-		WebElement toggle = driver.findElement(By.xpath("//button[@class='dropdown-toggle-split btn-lg dropdown-toggle btn btn-primary']"));
+		WebElement toggle = driver.findElement(By.xpath("//button[@class='dropdown-toggle-split btn-lg delete_arrow dropdown-toggle btn btn-']"));
 		toggle.click();
 		WebElement delete = driver.findElement(By.xpath("//button[text()='Delete']"));
 		delete.click();
 		WebElement cancel = driver.findElement(By.xpath("//button[@class='btn btn-secondary']"));
 		cancel.click();
-		WebElement toggle1 = driver.findElement(By.xpath("//button[@class='dropdown-toggle-split btn-lg dropdown-toggle btn btn-primary']"));
+		WebElement toggle1 = driver.findElement(By.xpath("//button[@class='dropdown-toggle-split btn-lg delete_arrow dropdown-toggle btn btn-']"));
 		toggle1.click();
 		WebElement delete1 = driver.findElement(By.xpath("//button[text()='Delete']"));
 		delete1.click();

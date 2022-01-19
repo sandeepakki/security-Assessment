@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,12 +15,13 @@ public class DeleteControl extends BaseClass {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//   Click on Controls Tab link
-		WebElement ControlTab = driver.findElement(By.xpath("//a[@data-flag='admin-controls']"));
-		ControlTab.click();
+		Actions a = new Actions(driver);
+		WebElement ControlTab = driver.findElement(By.xpath("//a[@href='/app/controls/']"));
+		a.moveToElement(ControlTab).click().build().perform();
 		// Click controls module
 		driver.navigate().to("https://sa.aristiun.com/app/controls/controls");
 		// Edit Control
-		WebElement clControl =driver.findElement(By.xpath("//span[text()='Test']"));
+		WebElement clControl =driver.findElement(By.xpath("//span[text()='Control2']"));
 		clControl.click();
 		WebElement deleteControl = driver.findElement(By.xpath("//button[@class='custom-delete-button btn btn-outline-secondary btn-md']"));
 		deleteControl.click();

@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,14 +15,15 @@ public class CtrlObjective extends BaseClass {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//   Click on Controls Tab link
-		WebElement ControlTab = driver.findElement(By.xpath("//a[@data-flag='admin-controls']"));
-		ControlTab.click();
+		Actions a = new Actions(driver);
+		WebElement ControlTab = driver.findElement(By.xpath("//a[@href='/app/controls/']"));
+		a.moveToElement(ControlTab).click().build().perform();
 	 // Click controls module
 		driver.navigate().to("https://sa.aristiun.com/app/controls/control-objective");
 		WebElement ctrlObj = driver.findElement(By.xpath("//button[text()='Add New']"));
 		ctrlObj.click();
 		Thread.sleep(1000);
-		WebElement Cancel = driver.findElement(By.xpath("//button[@class='btn btn-secondary']"));
+		WebElement Cancel = driver.findElement(By.xpath("//div[@class='close_button touch-pointer']"));
 		Cancel.click();
 		ctrlObj.click();
 		WebElement name = driver.findElement(By.name("name"));
