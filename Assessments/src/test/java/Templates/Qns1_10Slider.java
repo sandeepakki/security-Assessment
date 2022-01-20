@@ -29,6 +29,16 @@ public class Qns1_10Slider extends BaseClass {
 			System.out.println(e);
 		}
 		// 1- 10 Slider
+		WebElement section1 = driver.findElement(By.xpath("//span[contains(text(),'Sec1')]"));
+		section1.click();
+		WebElement Save = driver.findElement(By.xpath("(//span[text()='Save'])[2]"));
+		Save.click();
+		WebElement success = driver.findElement(By.tagName("h4"));
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOf(success));
+		Assert.assertTrue((success).getText()
+				.contains("Data updated successfully."));
+		Thread.sleep(3000);
 		WebElement addQnsBtn = driver.findElement(By.xpath("//button[text()='Add Question ']"));
 		addQnsBtn.click();
 		WebElement qns = driver.findElement(By.name("questions.[0].question"));
@@ -74,13 +84,13 @@ public class Qns1_10Slider extends BaseClass {
 		Thread.sleep(2000);
 		WebElement enterFeed = driver.findElement(By.xpath("(//div[@class='ql-editor ql-blank'])[10]"));
 		enterFeed.sendKeys("Positive");
-		WebElement Save = driver.findElement(By.xpath("//button[@class='mr-3 btn-multiple-state flex-grow-1  btn btn-primary btn-lg']"));
+		WebElement Save1 = driver.findElement(By.xpath("//button[@class='mr-3 btn-multiple-state flex-grow-1  btn btn-primary btn-lg']"));
 		Actions a = new Actions(driver);
-		a.moveToElement(Save).click().build().perform();
-		WebElement success = driver.findElement(By.tagName("h4"));
-		WebDriverWait wait = new WebDriverWait(driver,20);
-		wait.until(ExpectedConditions.visibilityOf(success));
-		Assert.assertTrue((success).getText()
+		a.moveToElement(Save1).click().build().perform();
+		WebElement success1 = driver.findElement(By.tagName("h4"));
+		WebDriverWait wait1 = new WebDriverWait(driver,20);
+		wait1.until(ExpectedConditions.visibilityOf(success1));
+		Assert.assertTrue((success1).getText()
 				.contains("Data updated successfully."));
 		Thread.sleep(3000);
 		

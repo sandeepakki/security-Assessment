@@ -22,12 +22,9 @@ public class publish_without_ExecReport extends BaseClass {
 		csa.click();
 		WebElement publish = driver.findElement(By.xpath("//button[text()='Publish']"));
 		publish.click();
+		Thread.sleep(2000);
 		WebElement name = driver.findElement(By.name("name"));
 		name.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"CSA-TEST TEMPLATE");
-		WebElement textHeading = driver.findElement(By.xpath("//span[@class='ql-picker-label']"));
-		textHeading.click();
-		WebElement Heading3 = driver.findElement(By.xpath("//span[@data-value='3']"));
-		Heading3.click();
 		WebElement tempIntro = driver.findElement(By.xpath("//div[@class='ql-editor']"));
 		tempIntro.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"Lorem Ipsum Is a dummy text..!");
 		WebElement clresurce = driver.findElement(By.xpath("//label[text()='Resources']/..//div[@class='react-select__control css-11tf2le']"));

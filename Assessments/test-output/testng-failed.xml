@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Assessments.NISTOnePagerOneQnsPerPage">
+      <class name="Templates.EditSecScore_DeleteSec">
         <methods>
-          <include name="OpenBrowser"/>
-          <include name="testInviteUser"/>
           <include name="CloseBrowser"/>
           <include name="login"/>
           <include name="logout"/>
+          <include name="testEditSectionScore"/>
+          <include name="OpenBrowser"/>
         </methods>
-      </class> <!-- Assessments.NISTOnePagerOneQnsPerPage -->
+      </class> <!-- Templates.EditSecScore_DeleteSec -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

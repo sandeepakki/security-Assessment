@@ -19,8 +19,7 @@ public class EditSecScore_DeleteSec extends BaseClass {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		WebElement AssessmentTab = driver.findElement(By.linkText("Assessments"));
 		AssessmentTab.click();
-		WebElement Templates = driver.findElement(By.linkText("Templates"));
-		Templates.click();
+		driver.navigate().to("https://sa.aristiun.com/app/assessments/templates");
 		try {
 		WebElement clTemp = driver.findElement(By.xpath("//div[contains(text(),'Lorem Ipsum')]"));
 		clTemp.click();

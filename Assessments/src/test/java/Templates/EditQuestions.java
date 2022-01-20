@@ -28,6 +28,20 @@ public class EditQuestions extends BaseClass {
 			System.out.println(e.getMessage());
 		}
 		 Thread.sleep(1000);
+		 WebElement section1 = driver.findElement(By.xpath("//span[contains(text(),'Sec1')]"));
+			section1.click();
+			WebElement Save = driver.findElement(By.xpath("(//span[text()='Save'])[2]"));
+			Save.click();
+			try {
+			WebElement success = driver.findElement(By.tagName("h4"));
+			WebDriverWait wait = new WebDriverWait(driver,20);
+			wait.until(ExpectedConditions.visibilityOf(success));
+			Assert.assertTrue((success).getText()
+					.contains("Data updated successfully."));
+			Thread.sleep(3000);}
+			catch(NoSuchElementException e) {
+				System.out.println(e.getMessage());
+			}
 		WebElement editQns = driver.findElement(By.xpath("//button[@class='mr-2 btn btn-outline-primary btn-sm']"));
 		editQns.click();
 		WebElement Qns = driver.findElement(By.xpath("(//div[@class='d-flex flex-grow-1 min-width-zero'])[1]"));

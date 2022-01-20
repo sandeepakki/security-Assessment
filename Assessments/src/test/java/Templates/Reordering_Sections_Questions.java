@@ -19,8 +19,7 @@ public class Reordering_Sections_Questions extends BaseClass {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		WebElement AssessmentTab = driver.findElement(By.linkText("Assessments"));
 		AssessmentTab.click();
-		WebElement Templates = driver.findElement(By.linkText("Templates"));
-		Templates.click();
+		driver.navigate().to("https://sa.aristiun.com/app/assessments/templates");
 		WebElement csa = driver.findElement(By.xpath("//div[contains(text(),'CSA - Cloud Security Controls')]"));
 		csa.click();
 		WebElement Reorder = driver.findElement(By.xpath("//button[text()='Reorder']"));

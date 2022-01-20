@@ -23,6 +23,7 @@ public class publish_without_DetailedExecReports extends BaseClass{
 		csa.click();
 		WebElement publish = driver.findElement(By.xpath("//button[text()='Publish']"));
 		publish.click();
+		Thread.sleep(2000);
 		WebElement name = driver.findElement(By.name("name"));
 		name.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"NIST-TEST Without Detailed Report");
 		WebElement tempIntro = driver.findElement(By.xpath("//div[@class='ql-editor']"));

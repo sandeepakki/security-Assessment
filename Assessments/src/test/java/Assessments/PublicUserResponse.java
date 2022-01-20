@@ -4,24 +4,33 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.Set;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class PublicUserResponse extends BaseClass {
+	
+	public static String generateString() {
+        String uuid = UUID.randomUUID().toString();
+        uuid = uuid.substring(0, Math.min(uuid.length(), 10));
+        System.err.println(uuid);
+        return uuid;
+    } 
 
 	@Test
 	public void testPublicUserzinvitation() throws AWTException, InterruptedException {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		WebElement AssessmentTab = driver.findElement(By.linkText("Assessments"));
 		AssessmentTab.click();
-		WebElement Assessments = driver.findElement(By.xpath("//a[@href='/app/assessments/assessment']"));
-		Assessments.click();
+		driver.navigate().to("https://sa.aristiun.com/app/assessments/assessment");
 		try {
 			WebElement clTemp = driver.findElement(By.xpath("//div[contains(text(),'NIST')]"));
 			clTemp.click();
@@ -32,13 +41,14 @@ public class PublicUserResponse extends BaseClass {
 		WebElement ShareLink = driver.findElement(By.xpath("//button[text()='Share Link']"));
 		ShareLink.click();
 		WebElement AssessmentName = driver.findElement(By.name("name"));
-		AssessmentName.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+"NSTSaample");
+		AssessmentName.sendKeys(Keys.chord(Keys.CONTROL,"a", Keys.DELETE)+generateString());
 		WebElement Save = driver.findElement(By.xpath("//button[@type='submit']"));
 		Save.click();
-		Thread.sleep(2000);	
-		WebElement success = driver.findElement(By.tagName("h4"));
+		WebElement success = driver.findElement(By.xpath("//div[@class='message']"));
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOf(success));
 		Assert.assertTrue((success).getText()
-				.contains("Public Link Created, you can now copy it"));
+				.contains("Success"));
 		Thread.sleep(2000);
 		String main = driver.getWindowHandle();
 		WebElement CopyLink = driver.findElement(By.xpath("//span[text()='Copy Link']"));
