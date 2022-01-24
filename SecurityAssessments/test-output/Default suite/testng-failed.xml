@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Controls_Module.SecurityAssessments.EditControl">
+      <class name="Risks_Module.detachResource">
         <methods>
           <include name="login"/>
           <include name="logout"/>
           <include name="OpenBrowser"/>
-          <include name="testEditControl"/>
+          <include name="testDetachResourceFromRisk"/>
           <include name="CloseBrowser"/>
         </methods>
-      </class> <!-- Controls_Module.SecurityAssessments.EditControl -->
+      </class> <!-- Risks_Module.detachResource -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

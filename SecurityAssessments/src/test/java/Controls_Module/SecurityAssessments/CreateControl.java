@@ -20,9 +20,7 @@ public class CreateControl extends BaseClass {
 		
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//   Click on Controls Tab link
-		Actions a = new Actions(driver);
-		WebElement ControlTab = driver.findElement(By.xpath("//a[@href='/app/controls/']"));
-		a.moveToElement(ControlTab).click().build().perform();
+		driver.navigate().to("https://sa.aristiun.com/app/controls/dashboard");
 	 // Click controls module
 		driver.navigate().to("https://sa.aristiun.com/app/controls/controls");
 		WebElement newControl = driver.findElement(By.xpath("//button[text()='Add New']"));

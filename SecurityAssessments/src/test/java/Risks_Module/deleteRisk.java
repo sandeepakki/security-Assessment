@@ -15,10 +15,10 @@ public class deleteRisk extends BaseClass {
 	public void testDeleteRisk() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//   Click on Risks Tab link
-		WebElement RiskTab = driver.findElement(By.xpath("//a[@data-flag='admin-risks']"));
-		RiskTab.click();
+		Thread.sleep(4000);
+		driver.navigate().to("https://sa.aristiun.com/app/risks");
 		// Delete Risk
-		WebElement risk = driver.findElement(By.xpath("//span[contains(text(),'Risk !9')]"));
+		WebElement risk = driver.findElement(By.xpath("//span[contains(text(),'RISK10')]"));
 		risk.click();
 		WebElement delete = driver.findElement(By.xpath("//button[text()='Delete']"));
 		delete.click();

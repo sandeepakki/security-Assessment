@@ -8,14 +8,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
 public class BaseClass {
-	
-	
+
 	public static WebDriver driver;
 
 	@BeforeTest
@@ -58,6 +59,8 @@ public class BaseClass {
 	@AfterClass
 	public void logout() {
 		WebElement UserAvatar = driver.findElement(By.xpath("//div[@class='navbar-right']"));
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOf(UserAvatar));
 		UserAvatar.click();
 		 WebElement logout=driver.findElement(By.xpath("//button[@type='button'][3]"));
 		 logout.click();

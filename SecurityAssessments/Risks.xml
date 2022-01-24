@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test_Risks">
+    <classes>
+      <class name="Risks_Module.CreatingRisk"/>
+      <class name="Risks_Module.EditRisk"/>
+      <class name="Risks_Module.detachResource"/>
+      <class name="Risks_Module.filterRisks"/>
+      <class name="Risks_Module.deleteRisk"/>
+    </classes>
+  </test> <!-- Test_Risks -->
+</suite> <!-- Suite -->

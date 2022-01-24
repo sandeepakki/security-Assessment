@@ -6,7 +6,7 @@
       <class name="com.aristiun.dev_sa.Login.Login">
         <methods>
           <include name="OpenBrowser"/>
-          <include name="testLoginFeature" invocation-numbers="4"/>
+          <include name="testLoginFeature"/>
           <include name="CloseBrowser"/>
         </methods>
       </class> <!-- com.aristiun.dev_sa.Login.Login -->

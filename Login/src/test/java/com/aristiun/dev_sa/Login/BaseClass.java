@@ -2,6 +2,7 @@ package com.aristiun.dev_sa.Login;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -22,8 +23,12 @@ public void OpenBrowser() {
 		System.setProperty("webdriver.gecko.driver", "C:\\drivers\\geckodriver.exe");
 		driver = new FirefoxDriver();
 	}
+	else if(browser.equals("Safari")) {
+		driver = new SafariDriver();
+	}
 	driver.manage().window().maximize();
 }
+
 @AfterTest
 public void CloseBrowser() {
 	driver.close();

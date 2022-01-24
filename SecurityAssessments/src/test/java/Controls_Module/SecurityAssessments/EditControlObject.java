@@ -15,9 +15,7 @@ public class EditControlObject extends BaseClass{
 	public void testEditCtrlObj() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//   Click on Controls Tab link
-		Actions a = new Actions(driver);
-		WebElement ControlTab = driver.findElement(By.xpath("//*[text()='Controls']"));
-		a.moveToElement(ControlTab).click().build().perform();
+		driver.navigate().to("https://sa.aristiun.com/app/controls/dashboard");
 		Thread.sleep(1000);
 	 // Click controls module
 		driver.navigate().to("https://sa.aristiun.com/app/controls/control-objective");

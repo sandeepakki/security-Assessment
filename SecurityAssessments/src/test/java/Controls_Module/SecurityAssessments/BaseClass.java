@@ -7,6 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
@@ -53,8 +56,11 @@ public class BaseClass {
 	
 	@AfterClass
 	public void logout() {
+		Actions a = new Actions(driver);
 		WebElement UserAvatar = driver.findElement(By.xpath("//div[@class='navbar-right']"));
-		UserAvatar.click();
+		WebDriverWait wait = new WebDriverWait(driver,20);
+		wait.until(ExpectedConditions.visibilityOf(UserAvatar));
+		a.moveToElement(UserAvatar).click().build().perform();
 		 WebElement logout=driver.findElement(By.xpath("//button[@type='button'][3]"));
 		 logout.click();
 	} 
