@@ -2,27 +2,26 @@
 <testng-results ignored="0" total="11" passed="0" failed="0" skipped="11">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-01-21T12:44:35 IST" name="Default suite" finished-at="2022-01-21T12:44:40 IST" duration-ms="5053">
+  <suite started-at="2022-01-25T12:12:59 IST" name="Default suite" finished-at="2022-01-25T12:13:07 IST" duration-ms="7836">
     <groups>
     </groups>
-    <test started-at="2022-01-21T12:44:35 IST" name="Default test" finished-at="2022-01-21T12:44:40 IST" duration-ms="5053">
+    <test started-at="2022-01-25T12:12:59 IST" name="Default test" finished-at="2022-01-25T12:13:07 IST" duration-ms="7836">
       <class name="com.aristiun.dev_sa.Login.Login">
-        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-21T12:44:35 IST" name="OpenBrowser" finished-at="2022-01-21T12:44:35 IST" duration-ms="229" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method is-config="true" signature="OpenBrowser()[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-25T12:12:59 IST" name="OpenBrowser" finished-at="2022-01-25T12:12:59 IST" duration-ms="305" status="FAIL">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver]]>
+              <![CDATA[The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver
-at org.openqa.selenium.safari.SafariDriverService.createDefaultService(SafariDriverService.java:59)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:63)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:41)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
 at com.aristiun.dev_sa.Login.BaseClass.OpenBrowser(BaseClass.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -50,11 +49,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowser -->
-        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-21T12:44:40 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-21T12:44:40 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-25T12:13:07 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-25T12:13:07 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -87,21 +86,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver]]>
+              <![CDATA[The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver
-at org.openqa.selenium.safari.SafariDriverService.createDefaultService(SafariDriverService.java:59)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:63)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:41)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
 at com.aristiun.dev_sa.Login.BaseClass.OpenBrowser(BaseClass.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -129,11 +127,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-21T12:44:40 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-21T12:44:40 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-25T12:13:07 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-25T12:13:07 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -166,21 +164,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver]]>
+              <![CDATA[The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver
-at org.openqa.selenium.safari.SafariDriverService.createDefaultService(SafariDriverService.java:59)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:63)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:41)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
 at com.aristiun.dev_sa.Login.BaseClass.OpenBrowser(BaseClass.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -208,11 +205,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-21T12:44:40 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-21T12:44:40 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-25T12:13:07 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-25T12:13:07 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -245,21 +242,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver]]>
+              <![CDATA[The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver
-at org.openqa.selenium.safari.SafariDriverService.createDefaultService(SafariDriverService.java:59)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:63)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:41)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
 at com.aristiun.dev_sa.Login.BaseClass.OpenBrowser(BaseClass.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -287,11 +283,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-21T12:44:40 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-21T12:44:40 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-25T12:13:07 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-25T12:13:07 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -324,21 +320,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver]]>
+              <![CDATA[The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver
-at org.openqa.selenium.safari.SafariDriverService.createDefaultService(SafariDriverService.java:59)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:63)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:41)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
 at com.aristiun.dev_sa.Login.BaseClass.OpenBrowser(BaseClass.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -366,11 +361,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-21T12:44:40 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-21T12:44:40 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-25T12:13:07 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-25T12:13:07 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -403,21 +398,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver]]>
+              <![CDATA[The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver
-at org.openqa.selenium.safari.SafariDriverService.createDefaultService(SafariDriverService.java:59)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:63)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:41)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
 at com.aristiun.dev_sa.Login.BaseClass.OpenBrowser(BaseClass.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -445,11 +439,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-21T12:44:40 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-21T12:44:40 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-25T12:13:07 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-25T12:13:07 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -482,21 +476,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver]]>
+              <![CDATA[The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver
-at org.openqa.selenium.safari.SafariDriverService.createDefaultService(SafariDriverService.java:59)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:63)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:41)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
 at com.aristiun.dev_sa.Login.BaseClass.OpenBrowser(BaseClass.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -524,11 +517,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-21T12:44:40 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-21T12:44:40 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-25T12:13:07 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-25T12:13:07 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -561,21 +554,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver]]>
+              <![CDATA[The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver
-at org.openqa.selenium.safari.SafariDriverService.createDefaultService(SafariDriverService.java:59)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:63)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:41)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
 at com.aristiun.dev_sa.Login.BaseClass.OpenBrowser(BaseClass.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -603,11 +595,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-21T12:44:40 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-21T12:44:40 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-25T12:13:07 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-25T12:13:07 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -640,21 +632,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver]]>
+              <![CDATA[The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver
-at org.openqa.selenium.safari.SafariDriverService.createDefaultService(SafariDriverService.java:59)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:63)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:41)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
 at com.aristiun.dev_sa.Login.BaseClass.OpenBrowser(BaseClass.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -682,11 +673,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-21T12:44:40 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-21T12:44:40 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-25T12:13:07 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-25T12:13:07 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -719,21 +710,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver]]>
+              <![CDATA[The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver
-at org.openqa.selenium.safari.SafariDriverService.createDefaultService(SafariDriverService.java:59)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:63)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:41)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
 at com.aristiun.dev_sa.Login.BaseClass.OpenBrowser(BaseClass.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -761,11 +751,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-21T12:44:40 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-21T12:44:40 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-25T12:13:07 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-25T12:13:07 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -798,21 +788,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver]]>
+              <![CDATA[The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver
-at org.openqa.selenium.safari.SafariDriverService.createDefaultService(SafariDriverService.java:59)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:63)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:41)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
 at com.aristiun.dev_sa.Login.BaseClass.OpenBrowser(BaseClass.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -840,11 +829,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-21T12:44:40 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-21T12:44:40 IST" duration-ms="0" status="SKIP">
+        <test-method signature="testLoginFeature(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-25T12:13:07 IST" name="testLoginFeature" data-provider="LoginData" finished-at="2022-01-25T12:13:07 IST" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -877,21 +866,20 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver]]>
+              <![CDATA[The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: SafariDriver requires Safari 10 running on OSX El Capitan or greater.
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-2MQ9SDJ', ip: '10.124.22.123', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
-Driver info: driver.version: SafariDriver
-at org.openqa.selenium.safari.SafariDriverService.createDefaultService(SafariDriverService.java:59)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:63)
-at org.openqa.selenium.safari.SafariDriver.<init>(SafariDriver.java:41)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\sande\eclipse-workspace\Assystant\Login\.\Login\Drivers\chromedriver.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:123)
 at com.aristiun.dev_sa.Login.BaseClass.OpenBrowser(BaseClass.java:19)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
@@ -919,11 +907,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginFeature -->
-        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-21T12:44:40 IST" name="CloseBrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1642749280401" status="SKIP">
+        <test-method is-config="true" signature="CloseBrowser()[pri:0, instance:com.aristiun.dev_sa.Login.Login@6da21078]" started-at="2022-01-25T12:13:07 IST" name="CloseBrowser" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1643092987467" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->

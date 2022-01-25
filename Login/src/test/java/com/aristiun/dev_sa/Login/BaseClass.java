@@ -15,7 +15,7 @@ public void OpenBrowser() {
 	String browser ="Chrome";
 	if(browser.equals("Chrome"))
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "\\Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 	}
 	else if(browser.equals("Firefox"))
