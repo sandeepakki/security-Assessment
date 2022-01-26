@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test_login">
+<suite name="Login-Feature">
+  <test thread-count="5" name="Test">
     <classes>
       <class name="com.aristiun.dev_sa.Login.Login"/>
     </classes>
-  </test> <!-- Test_login -->
-</suite> <!-- Suite -->
+  </test> <!-- Test -->
+</suite> <!-- Login-Feature -->

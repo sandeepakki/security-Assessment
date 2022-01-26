@@ -6,8 +6,10 @@
       <class name="com.aristiun.dev_sa.Login.Login">
         <methods>
           <include name="OpenBrowser"/>
+          <include name="logout"/>
           <include name="testLoginFeature"/>
           <include name="CloseBrowser"/>
+          <include name="login"/>
         </methods>
       </class> <!-- com.aristiun.dev_sa.Login.Login -->
     </classes>

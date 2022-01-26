@@ -8,8 +8,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class Login extends BaseClass {
+	public static final String currentDir = System.getProperty("user.dir");
 
-	@Test(dataProvider = "LoginData")
+	@Test(dataProvider="LoginData")
 	public void testLoginFeature(String Username,String Password,String exp,String landingPage,String ActResult,String Index) throws InterruptedException, IOException {
 		
 		driver.get("https://sa.aristiun.com/login");
@@ -26,7 +27,7 @@ public class Login extends BaseClass {
 		Thread.sleep(5000);
 		String actPage = driver.getCurrentUrl();
 		int i=Integer.parseInt(Index); 
-		String path=".\\dataFiles\\LoginData.xlsx";
+		String path=currentDir+"\\dataFiles\\LoginData.xlsx";
 		ExcelUtils excel = new ExcelUtils(path);
 			
 		 if(exp.equals("Pass"))
@@ -63,7 +64,7 @@ public class Login extends BaseClass {
 	@DataProvider(name="LoginData")
 	public String[][] getData() throws IOException {
 		
-		String path=".\\dataFiles\\LoginData.xlsx";
+		String path=currentDir+"\\dataFiles\\LoginData.xlsx";
 		ExcelUtils excel = new ExcelUtils(path);
 		
 		int totalrows= excel.getRowCount("Sheet1");
